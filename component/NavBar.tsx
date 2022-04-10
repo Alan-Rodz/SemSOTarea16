@@ -1,9 +1,14 @@
+import { SetStateAction } from 'react';
 import { Box, Center, Flex } from '@chakra-ui/react';
-import Link from 'next/link';
 import { GLOBAL_BORDER_RADIUS, GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR } from '../pages';
 
 // ********************************************************************************
-export const NavBar = () => {
+interface Props {
+  setMostrarInvestigaciones: React.Dispatch<SetStateAction<boolean>>;
+  setMostrarProgramas: React.Dispatch<SetStateAction<boolean>>
+  setMostrarAcercaDe: React.Dispatch<SetStateAction<boolean>>
+}
+export const NavBar: React.FC<Props> = ({setMostrarInvestigaciones, setMostrarProgramas, setMostrarAcercaDe}) => {
   return (
     <Flex bgColor={GLOBAL_COLOR} padding={5} gap={2}>
       <Box
@@ -15,10 +20,9 @@ export const NavBar = () => {
         <Center>
           <Box
             _hover={{ color: 'white', cursor: 'pointer' }}
-          >
-            <Link href={'/investigaciones/'}>
-              Investigaciones
-            </Link>
+            onClick={()=>setMostrarInvestigaciones(mostrarInvestigaciones => !mostrarInvestigaciones)}
+            >
+            Investigaciones
           </Box>
         </Center>
       </Box>
@@ -27,14 +31,13 @@ export const NavBar = () => {
         bgColor={GLOBAL_SECONDARY_COLOR}
         padding={3}
         borderRadius={GLOBAL_BORDER_RADIUS}
-      >
+        >
         <Center>
           <Box
             _hover={{ color: 'white', cursor: 'pointer' }}
-          >
-            <Link href={'/programas/'}>
-              Programas
-            </Link>
+            onClick={()=>setMostrarProgramas(mostrarProgramas => !mostrarProgramas)}
+            >
+            Programas
           </Box>
         </Center>
       </Box>
@@ -43,14 +46,13 @@ export const NavBar = () => {
         bgColor={GLOBAL_SECONDARY_COLOR}
         padding={3}
         borderRadius={GLOBAL_BORDER_RADIUS}
-      >
+        >
         <Center>
           <Box
             _hover={{ color: 'white', cursor: 'pointer' }}
+            onClick={()=>setMostrarAcercaDe(mostrarAcercasetMostrarAcercaDe => !mostrarAcercasetMostrarAcercaDe)}
           >
-            <Link href={'/acercade/'}>
-              Acerca De
-            </Link>
+            Acerca De
           </Box>
         </Center>
       </Box>

@@ -31,7 +31,7 @@ export const DatosMateria = () => {
           </Box>
         </Box>
         <Box
-          mt={'15%'}
+          mt={'5%'}
           ml={'15%'}
           bgColor={GLOBAL_SECONDARY_COLOR}
           width={'70%'}
@@ -50,7 +50,7 @@ export const DatosMateria = () => {
           </Box>
         </Box>
         <Box
-          mt={'15%'}
+          mt={'5%'}
           ml={'15%'}
           bgColor={GLOBAL_SECONDARY_COLOR}
           width={'70%'}

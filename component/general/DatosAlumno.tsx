@@ -27,7 +27,7 @@ export const DatosAlumno = () => {
               <Link href={'https://www.linkedin.com/in/alan-rodriguez-16b074192/'} passHref>
                 <ChakraLink isExternal>
                   <Box backgroundColor={'blue.500'} borderRadius={GLOBAL_BORDER_RADIUS} padding={2}>
-                    <AiFillLinkedin color={'white'}/>
+                    <AiFillLinkedin color={'white'} />
                   </Box>
                 </ChakraLink>
               </Link>
@@ -35,17 +35,22 @@ export const DatosAlumno = () => {
               <Link href={'https://github.com/Alan-Rodz'} passHref>
                 <ChakraLink isExternal>
                   <Box backgroundColor={'blue.500'} borderRadius={GLOBAL_BORDER_RADIUS} padding={2} ml={2}>
-                    <AiFillGithub color={'white'}/>
+                    <AiFillGithub color={'white'} />
                   </Box>
                 </ChakraLink>
               </Link>
-
-              <Box ml={2}>
+              <Box
+                bgColor={GLOBAL_COLOR}
+                borderRadius={GLOBAL_BORDER_RADIUS}
+                padding={1}
+                ml={2}
+              >
                 Alan Ramiro Rodríguez González
               </Box>
             </Center>
           </Flex>
         </Box>
+
         <Box
           mt={'15%'}
           ml={'15%'}
@@ -56,10 +61,18 @@ export const DatosAlumno = () => {
           borderRadius={GLOBAL_BORDER_RADIUS}
           textAlign={'justify'}
         >
-          Conclusión Final: En general considero que las últimas actividades del curso tienen una complejidad innecesaria para
-          la cantidad de puntos que valen. Por dicha razón he optado por no hacerlas, ya que la cantidad de tiempo que se requiere
-          para llevarlas a cabo no corresponde, en mi opinión, al puntaje que otorgan hacia la calificación final. Más allá de eso los
-          temas vistos me parecen apropiados.
+          <Box
+            bgColor={GLOBAL_COLOR}
+            borderRadius={GLOBAL_BORDER_RADIUS}
+            padding={1}
+            width={'100%'}
+            textAlign={'justify'}
+          >
+            Conclusión Final: En general considero que las últimas actividades del curso tienen una complejidad innecesaria para
+            la cantidad de puntos que valen. Por dicha razón he optado por no hacerlas, ya que la cantidad de tiempo que se requiere
+            para llevarlas a cabo no corresponde, en mi opinión, al puntaje que otorgan hacia la calificación final. Más allá de eso los
+            temas vistos me parecen apropiados.
+          </Box>
         </Box>
       </Flex>
     </Box>

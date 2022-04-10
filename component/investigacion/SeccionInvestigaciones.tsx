@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Investigacion, investigaciones } from '../../info/investigaciones';
+import { Investigacion, investigaciones } from '../../info/investigacion/investigaciones';
 import { DatosInvestigacion } from './DatosInvestigacion'
 import { ListaInvestigaciones } from './ListaInvestigaciones'
 

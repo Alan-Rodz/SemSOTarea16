@@ -1,6 +1,6 @@
 import { Box, Flex, Center } from '@chakra-ui/react';
 import { SetStateAction } from 'react';
-import { Investigacion, investigaciones } from '../../info/investigaciones';
+import { Investigacion, investigaciones } from '../../info/investigacion/investigaciones';
 
 import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS } from '../../pages'
 

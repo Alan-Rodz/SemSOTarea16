@@ -20,7 +20,15 @@ export const DatosMateria = () => {
           fontSize={15}
           borderRadius={GLOBAL_BORDER_RADIUS}
         >
-          Portafolio de Trabajos de Seminario de Solución de Problemas de  Sistemas Operativos
+          <Box
+            bgColor={GLOBAL_COLOR}
+            borderRadius={GLOBAL_BORDER_RADIUS}
+            padding={1}
+            width={'100%'}
+            textAlign={'center'}
+          >
+            Portafolio de Trabajos de Seminario de Solución de Problemas de  Sistemas Operativos
+          </Box>
         </Box>
         <Box
           mt={'15%'}
@@ -31,7 +39,15 @@ export const DatosMateria = () => {
           fontSize={15}
           borderRadius={GLOBAL_BORDER_RADIUS}
         >
-          Maestra Violeta del Rocío Becerra Velázquez
+          <Box
+            bgColor={GLOBAL_COLOR}
+            borderRadius={GLOBAL_BORDER_RADIUS}
+            padding={1}
+            width={'100%'}
+            textAlign={'center'}
+          >
+            Maestra Violeta del Rocío Becerra Velázquez
+          </Box>
         </Box>
         <Box
           mt={'15%'}
@@ -43,11 +59,15 @@ export const DatosMateria = () => {
           borderRadius={GLOBAL_BORDER_RADIUS}
         >
           <Flex flexDir={'column'}>
-            <Box fontSize={15}>
-              Sección D01
-            </Box>
-            <Box fontSize={15}>
-              NRC 103844
+            <Box
+              fontSize={15}
+              bgColor={GLOBAL_COLOR}
+              borderRadius={GLOBAL_BORDER_RADIUS}
+              padding={1}
+              width={'100%'}
+              textAlign={'center'}
+            >
+              Sección D01 - NRC 103844
             </Box>
           </Flex>
         </Box>

@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { DatosAlumno } from '../component/general/DatosAlumno';
 import { DatosMateria } from '../component/general/DatosMateria';
 import { NavBar } from '../component/general/NavBar';

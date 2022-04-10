@@ -57,7 +57,7 @@ export const programas: Programa[] = [
     githubLink: 'https://github.com/Alan-Rodz/SemSOTarea12',
   },
   { numeroDeTarea: 16, 
-    link: '', 
+    link: 'https://semsotarea16.s3.amazonaws.com/RodriguezAlanD01Act16.pdf', 
     nombre: 'Portafolio de Evidencias del Curso', 
     fechaDeEntrega: '20 de Mayo de 2022',
     reseña: 'En esta actividad se hace un portafolio donde se incluye la información de todos los trabajos realizados a lo largo del curso.',

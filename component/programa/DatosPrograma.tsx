@@ -87,15 +87,18 @@ export const DatosPrograma: React.FC<Props> = ({ programaActivo }) => {
         </Box>
 
         {/* Video */}
-        <Box height={'100%'} mt={2}>
-          <iframe src={programaActivo.ytLink}
-            allow={'autoplay; encrypted-media'}
-            title={'video'}
-            allowFullScreen
-            width={'100%'}
-            height={'100%'}
-          />
-        </Box>
+        {
+          programaActivo.numeroDeTarea !== 16/*ultima tarea no tiene video*/ &&
+          <Box height={'100%'} mt={2}>
+            <iframe src={programaActivo.ytLink}
+              allow={'autoplay; encrypted-media'}
+              title={'video'}
+              allowFullScreen
+              width={'100%'}
+              height={'100%'}
+            />
+          </Box>
+        }
       </Box>
     </Box>
   )

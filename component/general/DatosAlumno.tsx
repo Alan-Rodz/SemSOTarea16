@@ -2,7 +2,7 @@ import { Box, Center, Flex, Link as ChakraLink } from '@chakra-ui/react';
 import Link from 'next/link';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
-import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS, GLOBAL_THIRD_COLOR } from '../pages';
+import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS, GLOBAL_THIRD_COLOR } from '../../pages';
 
 // ********************************************************************************
 export const DatosAlumno = () => {

@@ -1,6 +1,7 @@
 import { SetStateAction } from 'react';
 import { Box, Center, Flex } from '@chakra-ui/react';
-import { GLOBAL_BORDER_RADIUS, GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR } from '../pages';
+
+import { GLOBAL_BORDER_RADIUS, GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR } from '../../pages';
 
 // ********************************************************************************
 interface Props {

@@ -5,6 +5,7 @@ import { DatosAlumno } from '../component/general/DatosAlumno';
 import { DatosMateria } from '../component/general/DatosMateria';
 import { NavBar } from '../component/general/NavBar';
 import { SeccionInvestigaciones } from '../component/investigacion/SeccionInvestigaciones';
+import { SeccionProgramas } from '../component/programa/SeccionProgramas';
 
 // ********************************************************************************
 export const GLOBAL_COLOR = '#caf0f8';
@@ -41,6 +42,7 @@ const Home: NextPage = () => {
         }
         {seccionActual === 'programas' &&
           <Flex gap={1} backgroundColor={GLOBAL_THIRD_COLOR}>
+            <SeccionProgramas />
           </Flex>
         }
       </Box>

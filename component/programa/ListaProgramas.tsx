@@ -1,12 +1,12 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { SetStateAction } from 'react';
-import { Investigacion, investigaciones } from '../../info/investigacion/investigaciones';
 
+import { programas, Programa } from '../../info/programa/programas';
 import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS } from '../../pages'
 
 // ********************************************************************************
-interface Props {setInvestigacionActiva: React.Dispatch<SetStateAction<Investigacion>> }
-export const ListaInvestigaciones: React.FC<Props> = ({setInvestigacionActiva}) => {
+interface Props {setProgramaActivo: React.Dispatch<SetStateAction<Programa>> }
+export const ListaProgramas: React.FC<Props> = ({setProgramaActivo}) => {
   return (
     <Box
       flexBasis={'100%'}
@@ -16,7 +16,7 @@ export const ListaInvestigaciones: React.FC<Props> = ({setInvestigacionActiva}) 
     >
       <Flex flexDir={'column'}>
         {
-          investigaciones.map((investigacion, index) => (
+          programas.map((programa, index) => (
             <Box
               key={index}
               mt={'5%'}
@@ -34,9 +34,9 @@ export const ListaInvestigaciones: React.FC<Props> = ({setInvestigacionActiva}) 
                   padding={1}
                   width={'100%'}
                   _hover={{cursor:'pointer', color:'blue'}}
-                  onClick={()=>setInvestigacionActiva(investigacion)}
+                  onClick={()=>setProgramaActivo(programa)}
                 >
-                  {`${investigacion.numeroDeTarea}. ${investigacion.nombre}`}
+                  {`${programa.numeroDeTarea}. ${programa.nombre}`}
                 </Box>
               </Flex>
             </Box>

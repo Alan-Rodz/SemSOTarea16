@@ -1,11 +1,11 @@
 import { Box, Flex } from '@chakra-ui/react';
 
-import { Investigacion } from '../../info/investigacion/investigaciones';
+import { Programa } from '../../info/programa/programas';
 import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS } from '../../pages';
 
 // ********************************************************************************
-interface Props { investigacionActiva: Investigacion }
-export const DatosInvestigacion: React.FC<Props> = ({ investigacionActiva }) => {
+interface Props { programaActivo: Programa }
+export const DatosPrograma: React.FC<Props> = ({ programaActivo }) => {
   return (
     <Box
       flexBasis={'100%'}
@@ -30,7 +30,7 @@ export const DatosInvestigacion: React.FC<Props> = ({ investigacionActiva }) => 
             padding={1}
             width={'100%'}
           >
-            {investigacionActiva.nombre}
+            {programaActivo.nombre}
           </Box>
         </Box>
 
@@ -51,12 +51,12 @@ export const DatosInvestigacion: React.FC<Props> = ({ investigacionActiva }) => 
             width={'100%'}
             textAlign={'justify'}
           >
-            {investigacionActiva.reseña}
+            {programaActivo.reseña}
           </Box>
         </Box>
 
         {/* PDF */}
-        <object data={investigacionActiva.link} type={'application/pdf'} width={'100%'} height={'100%'} />
+        <object data={programaActivo.link} type={'application/pdf'} width={'100%'} height={'100%'} />
       </Flex>
     </Box>
   )

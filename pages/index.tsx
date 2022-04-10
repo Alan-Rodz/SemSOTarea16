@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 import { DatosAlumno } from '../component/general/DatosAlumno';
 import { DatosMateria } from '../component/general/DatosMateria';
 import { NavBar } from '../component/general/NavBar';
-import { DatosInvestigacion } from '../component/investigacion/DatosInvestigacion';
-import { ListaInvestigaciones } from '../component/investigacion/ListaInvestigaciones';
+import { SeccionInvestigaciones } from '../component/investigacion/SeccionInvestigaciones';
 
 // ********************************************************************************
 export const GLOBAL_COLOR = '#caf0f8';
@@ -17,56 +16,31 @@ export const GLOBAL_PADDING = 5;
 // === Component ================================================================== 
 const Home: NextPage = () => {
   // === State ====================================================================
-  const [mostrarInvestigaciones, setMostrarInvestigaciones] = useState(false);
-  const [mostrarProgramas, setMostrarProgramas] = useState(false);
-  const [mostrarAcercaDe, setMostrarAcercaDe] = useState(true);
-  
-  // === Effects ==================================================================
-  useEffect(() => {
-    if(mostrarInvestigaciones) {
-      setMostrarProgramas(false);
-      setMostrarAcercaDe(false);
-    }
-  }, [mostrarInvestigaciones]);
-  
-  useEffect(() => {
-    if(mostrarProgramas) {
-      setMostrarInvestigaciones(false);
-      setMostrarAcercaDe(false);
-    }
-  }, [mostrarProgramas]);
-
-  useEffect(() => {
-    if(mostrarAcercaDe) {
-      setMostrarInvestigaciones(false);
-      setMostrarProgramas(false);
-    }
-  }, [mostrarAcercaDe]);
+  const [seccionActual, setSeccionActual] = useState<'paginaPrincipal' | 'investigaciones' | 'programas'>('paginaPrincipal');
 
   // === UI =======================================================================
   return (
     <Box bgColor={GLOBAL_THIRD_COLOR}>
-      <NavBar setMostrarInvestigaciones={setMostrarInvestigaciones} setMostrarProgramas={setMostrarProgramas} setMostrarAcercaDe={setMostrarAcercaDe} />
+      <NavBar setSeccionActual={setSeccionActual} />
       <Box
         mt={1}
         bgColor={GLOBAL_COLOR}
         width={'100%'}
         height={'100%'}
       >
-        { mostrarInvestigaciones &&
-          <Flex gap={1} backgroundColor={GLOBAL_THIRD_COLOR}>
-            <DatosInvestigacion/>
-            <ListaInvestigaciones/>
-          </Flex>
-        }
-        { mostrarProgramas &&
-          <Flex gap={1} backgroundColor={GLOBAL_THIRD_COLOR}>
-          </Flex>
-        }
-        { mostrarAcercaDe &&
+        {seccionActual === 'paginaPrincipal' &&
           <Flex gap={1} backgroundColor={GLOBAL_THIRD_COLOR}>
             <DatosMateria />
             <DatosAlumno />
+          </Flex>
+        }
+        {seccionActual === 'investigaciones' &&
+          <Flex gap={1} backgroundColor={GLOBAL_THIRD_COLOR}>
+            <SeccionInvestigaciones />
+          </Flex>
+        }
+        {seccionActual === 'programas' &&
+          <Flex gap={1} backgroundColor={GLOBAL_THIRD_COLOR}>
           </Flex>
         }
       </Box>

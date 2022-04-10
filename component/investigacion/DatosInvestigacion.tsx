@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 import { Investigacion } from '../../info/investigacion/investigaciones';
 import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS } from '../../pages';
@@ -13,7 +13,7 @@ export const DatosInvestigacion: React.FC<Props> = ({ investigacionActiva }) => 
       height={'100vh'}
       overflow={'scroll'}
     >
-      <Flex flexDir={'column'} gap={2} margin={3} height={'100%'}>
+      <Box flexDir={'column'} gap={2} margin={3} height={'100%'}>
         {/* Titulo */}
         <Box
           mt={'1%'}
@@ -56,8 +56,10 @@ export const DatosInvestigacion: React.FC<Props> = ({ investigacionActiva }) => 
         </Box>
 
         {/* PDF */}
-        <object data={investigacionActiva.link} type={'application/pdf'} width={'100%'} height={'100%'} />
-      </Flex>
+        <Box height={'100%'} mt={2}>
+          <object data={investigacionActiva.link} type={'application/pdf'} width={'100%'} height={'100%'} />
+        </Box>
+      </Box>
     </Box>
   )
 }

@@ -4,7 +4,7 @@ import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { DiReact } from 'react-icons/di';
 import { SiTypescript, SiVercel } from 'react-icons/si';
 
-import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS, GLOBAL_THIRD_COLOR } from '../../pages';
+import { GLOBAL_COLOR, GLOBAL_SECONDARY_COLOR, GLOBAL_BORDER_RADIUS } from '../../pages';
 
 // ********************************************************************************
 export const DatosAlumno = () => {
